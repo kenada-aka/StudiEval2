@@ -10,7 +10,7 @@ main > div.new {
 
 main > div.player1 {
 	grid-area:player1;
-	background-color: red;
+	text-align:center;
 }
 
 main > div.globalP1 {
@@ -30,7 +30,7 @@ main > div.dice {
 
 main > div.player2 {
 	grid-area:player2;
-	background-color: green;
+	text-align:center;
 }
 
 main > div.globalP2 {
