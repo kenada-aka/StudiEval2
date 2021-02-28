@@ -1,0 +1,75 @@
+
+/* Layout CSS Grid */
+
+
+
+main > div.new {
+	grid-area: new;
+	background-color: #8ca0ff;
+}
+
+main > div.player1 {
+	grid-area:player1;
+	background-color: red;
+}
+
+main > div.globalP1 {
+	grid-area:globalP1;
+	background-color: red;
+}
+
+main > div.roundP1 {
+	grid-area:roundP1;
+	background-color: yellow;
+}
+
+main > div.dice {
+	grid-area:dice;
+	background-color: orange;
+}
+
+main > div.player2 {
+	grid-area:player2;
+	background-color: green;
+}
+
+main > div.globalP2 {
+	grid-area:globalP2;
+	background-color: red;
+}
+
+main > div.roundP2 {
+	grid-area:roundP2;
+	background-color: yellow;
+}
+
+main > div.roll {
+	grid-area:roll;
+	background-color: violet;
+}
+
+main > div.hold {
+	grid-area:hold;
+	background-color: violet;
+}
+
+main {
+	
+	display:grid;
+	
+	width:100vw;
+	height:100vh;
+	
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	
+	grid-template-areas:
+		"new new new"
+		"player1 . player2"
+		"globalP1 dice globalP2"
+		"roundP1 roll roundP2"
+		"roundP1 hold roundP2";
+	
+}
+
+
