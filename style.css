@@ -4,8 +4,8 @@
 
 
 main > div.new {
-	grid-area: new;
-	background-color: #8ca0ff;
+	grid-area:new;
+	text-align:center;
 }
 
 main > div.player1 {
