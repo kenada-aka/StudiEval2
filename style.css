@@ -22,7 +22,8 @@ main > div.globalP1 {
 
 main > div.roundP1 {
 	grid-area:roundP1;
-	background-color: yellow;
+	align-self:center;
+	text-align:center;
 }
 
 main > div.dice {
@@ -43,7 +44,8 @@ main > div.globalP2 {
 
 main > div.roundP2 {
 	grid-area:roundP2;
-	background-color: yellow;
+	align-self:center;
+	text-align:center;
 }
 
 main > div.roll {
@@ -86,6 +88,27 @@ main input.score {
 	color:#ef473a;
 	font-size:36pt;
 	height:42pt;
+}
+
+/* Fix "card" */
+
+main div.card {
+	margin:auto;
+	width:50%;
+	height:200px;
+	background-color:#ef473a;
+}
+
+/* Fix Input current */
+
+main input.current {
+	margin:auto;
+	background-color:transparent;
+	text-align:center;
+	color:white;
+	font-size:24pt;
+	height:36pt;
+	width:100%;
 }
 
 
