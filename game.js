@@ -1,10 +1,48 @@
 
-// Initialisation du Canvas
+/* Class Player */
 
-let dice = new Dice(200, 200);
+const Player = function() {
+	this.score = 0;
+	this.round = 0;
+};
 
-dice.init("dice");
+/* Class Game */
 
-dice.draw(5); // test
-//dice.draw(6); // test ng
-//dice.draw("a"); // test ng
+const Game = function() {
+	this.dice;
+};
+
+Game.prototype = {
+	
+	// Démarrer le jeu
+	
+	start:function() {
+		
+		// Initialisation du Canvas
+		
+		this.dice = new Dice(200, 200);
+		this.dice.init("dice");
+	},
+	
+	// Debug / Test
+	
+	test:function() {
+		this.dice.draw(5); // test
+		//this.dice.draw(6); // test ng
+		//this.dice.draw("a"); // test ng
+	}
+	
+};
+
+
+// Instantiation de la classe Game
+
+let game = new Game;
+
+// Démarrage du jeu
+
+game.start();
+
+// Test
+
+game.test();
