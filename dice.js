@@ -63,13 +63,13 @@ Dice.prototype = {
 		// Réglage du padding
 		let padding = {x:this.width/3, y:this.height/3};
 		// Taille du cercle
-		let size = 25;
+		let size = 20;
 		// Position de départ + Centrage
 		let x = padding.x/2;
 		let y = padding.y/2;
 		
 		
-		this.ctx.fillStyle = "#332";
+		this.ctx.fillStyle = "#ef473a";
 		for(let i = 0, ii = this.mapping[number].length; i < ii; i++) {
 			if(this.mapping[number][i] != "-") {
 				this.ctx.beginPath();
