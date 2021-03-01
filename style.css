@@ -45,12 +45,12 @@ main > div.roundP2 {
 
 main > div.roll {
 	grid-area:roll;
-	background-color: violet;
+	align-self:center;
 }
 
 main > div.hold {
 	grid-area:hold;
-	background-color: violet;
+	align-self:center;
 }
 
 main {
