@@ -1,4 +1,11 @@
 
+/* Class Player */
+
+const Player = function() {
+	this.score = 0;
+	this.round = 0;
+};
+
 /* Class Game */
 
 const Game = function() {
