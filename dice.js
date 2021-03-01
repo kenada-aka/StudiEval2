@@ -60,27 +60,31 @@ Dice.prototype = {
 	
 	draw:function(number) {
 		
-		let size = 50;
-		let x = 25;
-		let y = 25;
+		// Réglage du padding
+		let padding = {x:this.width/3, y:this.height/3};
+		// Taille du cercle
+		let size = 25;
+		// Position de départ + Centrage
+		let x = padding.x/2;
+		let y = padding.y/2;
+		
 		
 		this.ctx.fillStyle = "#332";
 		for(let i = 0, ii = this.mapping[number].length; i < ii; i++) {
 			if(this.mapping[number][i] != "-") {
 				this.ctx.beginPath();
-				//var j = dotsToDraw[i];
 				// arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire)
-				this.ctx.arc(x, y, size*0.07, 0, 2 * Math.PI);
+				this.ctx.arc(x, y, size, 0, 2 * Math.PI);
 				this.ctx.fill();
 				
 			}
 			console.log(x, y);
 			// Gestion de la position (x, y) suivante de la matrice 3x3
 			if((i+1) % 3 == 0) {
-				x = 25;
-				y += 50;
+				x = padding.x/2;
+				y += padding.y;
 			} else {
-				x += 75;
+				x += padding.x;
 			}
 		}
 	}
