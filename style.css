@@ -28,7 +28,8 @@ main > div.roundP1 {
 
 main > div.dice {
 	grid-area:dice;
-	background-color: orange;
+	align-self:center;
+	text-align:center;
 }
 
 main > div.player2 {
@@ -72,7 +73,7 @@ main {
 	
 	grid-template-areas:
 		"new new new"
-		"player1 . player2"
+		"player1 dice player2"
 		"globalP1 dice globalP2"
 		"roundP1 roll roundP2"
 		"roundP1 hold roundP2";
@@ -109,6 +110,13 @@ main input.current {
 	font-size:24pt;
 	height:36pt;
 	width:100%;
+}
+
+/* Canvas : Dice */
+
+main canvas.dice {
+	width:200px;
+	height:200px;
 }
 
 
