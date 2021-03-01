@@ -60,6 +60,13 @@ Dice.prototype = {
 	
 	draw:function(number) {
 		
+		// Vérification de la propriété "mapping" (Array) avec "number"
+		
+		if(typeof this.mapping[number] == "undefined") {
+			alert("La valeur du dé doit être comprise entre 0 et 5");
+			return;
+		}
+		
 		// Réglage du padding
 		let padding = {x:this.width/3, y:this.height/3};
 		// Taille du cercle
@@ -68,6 +75,8 @@ Dice.prototype = {
 		let x = padding.x/2;
 		let y = padding.y/2;
 		
+		// Dessine le(s) cercle(s)
+		// INFO : Décallage entre la valeur virtuel du dé et le programme (exemple : la valeur 2 dans le programme correspond à 3 sur le dé)
 		
 		this.ctx.fillStyle = "#ef473a";
 		for(let i = 0, ii = this.mapping[number].length; i < ii; i++) {
@@ -76,9 +85,7 @@ Dice.prototype = {
 				// arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire)
 				this.ctx.arc(x, y, size, 0, 2 * Math.PI);
 				this.ctx.fill();
-				
 			}
-			console.log(x, y);
 			// Gestion de la position (x, y) suivante de la matrice 3x3
 			if((i+1) % 3 == 0) {
 				x = padding.x/2;
