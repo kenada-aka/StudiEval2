@@ -1,7 +1,7 @@
 
 // Initialisation du Canvas
 
-let dice = new Dice;
+let dice = new Dice(200, 200);
 
 dice.init("dice");
 

@@ -1,10 +1,13 @@
 
 /* Class Dice */
 
-const Dice = function() {
+const Dice = function(width, height) {
 	
-	this.canvas,		// element
-	this.ctx;			// context
+	this.width = width;			// largeur
+	this.height = height;		// hauteur
+	
+	this.canvas,				// element
+	this.ctx;					// context
 	
 	// Mapping des différentes faces du dé virtuel (dans l'ordre de 1 à 6)
 	// '-' = vide
@@ -44,6 +47,8 @@ Dice.prototype = {
 	
 	init:function(id) {
 		this.canvas = document.getElementById(id);
+		this.canvas.width = this.width;
+		this.canvas.height = this.height;
 		if(this.canvas.getContext) {
 			this.ctx = this.canvas.getContext("2d");
 		} else {
