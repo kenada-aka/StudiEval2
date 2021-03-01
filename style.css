@@ -5,11 +5,13 @@
 
 main > div.new {
 	grid-area:new;
+	align-self:center;
 	text-align:center;
 }
 
 main > div.player1 {
 	grid-area:player1;
+	align-self:center;
 	text-align:center;
 }
 
@@ -30,6 +32,7 @@ main > div.dice {
 
 main > div.player2 {
 	grid-area:player2;
+	align-self:center;
 	text-align:center;
 }
 
@@ -46,11 +49,13 @@ main > div.roundP2 {
 main > div.roll {
 	grid-area:roll;
 	align-self:center;
+	text-align:center;
 }
 
 main > div.hold {
 	grid-area:hold;
 	align-self:center;
+	text-align:center;
 }
 
 main {
