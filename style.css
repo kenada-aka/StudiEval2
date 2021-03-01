@@ -15,7 +15,7 @@ main > div.player1 {
 
 main > div.globalP1 {
 	grid-area:globalP1;
-	background-color: red;
+	align-self:center;
 }
 
 main > div.roundP1 {
@@ -35,7 +35,7 @@ main > div.player2 {
 
 main > div.globalP2 {
 	grid-area:globalP2;
-	background-color: red;
+	align-self:center;
 }
 
 main > div.roundP2 {
@@ -70,6 +70,17 @@ main {
 		"roundP1 roll roundP2"
 		"roundP1 hold roundP2";
 	
+}
+
+/* Fix Input scores */
+
+main input.score {
+	margin:auto;
+	background-color:transparent;
+	text-align:center;
+	color:#ef473a;
+	font-size:36pt;
+	height:42pt;
 }
 
 
