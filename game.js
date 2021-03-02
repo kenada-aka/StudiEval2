@@ -31,12 +31,13 @@ Player.prototype = {
 		this.score += this.round;
 		this.round = 0;
 		$('div.global'+ this.id +' input').value = this.score;
-		this.updateRound();
+		this.updateRound(0);
 	},
 	
 	// Mise à jour de round
 	
-	updateRound:function() {
+	updateRound:function(number) {
+		this.round += number;
 		$('div.round'+ this.id +' input').value = this.round;
 	}
 	
@@ -100,6 +101,8 @@ Game.prototype = {
 		}
 		// Génétation d'un nombre aléatoire entre 0 et 5
 		let number = Math.floor(Math.random() * Math.floor(6));
+		// Mise à jour des points de round du joueur en cours
+		this.players[this.currentPlayer].updateRound(number);
 		console.log(number);
 	},
 	
