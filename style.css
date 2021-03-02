@@ -129,11 +129,6 @@ main input.current {
 	width:100%;
 }
 
-/* Canvas : Dice */
-
-main canvas.dice {
-	border:1px solid black;
-}
 
 /* Toggle de témoin en forme de cercle à côté de PLAYER */
 
