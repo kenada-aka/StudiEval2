@@ -23,3 +23,11 @@ const _addEventListener = function(obj, event, func) {
 		return obj.attachEvent("on"+ event, func);
 	}
 };
+
+// Système de message d'Alerte
+
+const Alert = function(message) {
+	$('#alert input.message').value = message;
+	$('#alert').classList.toggle("active");
+	setTimeout(function() { $('#alert').classList.toggle("active"); }, 3000);
+};
