@@ -18,6 +18,13 @@ Player.prototype = {
 		this.round = 0;
 	},
 	
+	// Active/Désactive le témoin (cercle rouge) qui indique le joueur entrain de jouer...
+	
+	toggleCurrentPlayer:function() {
+		$('div.player'+ this.id +' i').classList.toggle("active");
+		
+	},
+	
 	// Mise à jour du score
 	
 	updateGlobal:function() {
@@ -70,6 +77,7 @@ Game.prototype = {
 		this.players.p1.init();
 		this.players.p1.updateGlobal();
 		this.players.p1.updateRound();
+		this.players.p1.toggleCurrentPlayer();
 		// Initialisation du joueur 2
 		this.players.p2 = new Player("P2");
 		this.players.p2.init();

@@ -9,7 +9,7 @@ main > div.new {
 	text-align:center;
 }
 
-main > div.player1 {
+main > div.playerP1 {
 	grid-area:player1;
 	align-self:center;
 	text-align:center;
@@ -32,7 +32,7 @@ main > div.dice {
 	text-align:center;
 }
 
-main > div.player2 {
+main > div.playerP2 {
 	grid-area:player2;
 	align-self:center;
 	text-align:center;
@@ -116,6 +116,12 @@ main input.current {
 
 main canvas.dice {
 	border:1px solid black;
+}
+
+/* Ne pas afficher le témoin à côté de PLAYER */
+
+div.playerP1 h1 i, div.playerP2 h1 i {
+	display:none;
 }
 
 
