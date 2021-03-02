@@ -22,6 +22,13 @@ Game.prototype = {
 		
 		this.dice = new Dice(200, 200);
 		this.dice.init("dice");
+		
+		// Initialisation des événements
+		
+		_addEventListener($('#new'), "click", function(e) { console.log("new"); });
+		_addEventListener($('#roll'), "click", function(e) { console.log("roll"); });
+		_addEventListener($('#hold'), "click", function(e) { console.log("hold"); });
+		
 	},
 	
 	// Debug / Test
