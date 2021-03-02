@@ -72,20 +72,32 @@ Game.prototype = {
 		_addEventListener($('#roll'), "click", this.roll.bind(this));
 		_addEventListener($('#hold'), "click", this.hold.bind(this));
 		
+		// Initialisation des joueurs (fix rafraichissement de la page)
+		
+		this.init();
+		
+	},
+	
+	// Initialisation des joueurs
+	
+	init:function() {
+		// Initialisation du joueur 1
+		this.players.P1 = new Player("P1");
+		this.players.P1.init();
+		this.players.P1.updateGlobal();
+		// Initialisation du joueur 2
+		this.players.P2 = new Player("P2");
+		this.players.P2.init();
+		this.players.P2.updateGlobal();
 	},
 	
 	// Rafraichissement de la partie
 	
 	refresh:function() {
-		// Initialisation du joueur 1
-		this.players.P1 = new Player("P1");
-		this.players.P1.init();
-		this.players.P1.updateGlobal();
+		// Initialisation des joueurs
+		this.init();
+		// Tour du Joueur 1
 		this.players.P1.toggleCurrentPlayer();
-		// Initialisation du joueur 2
-		this.players.P2 = new Player("P2");
-		this.players.P2.init();
-		this.players.P2.updateGlobal();
 		// Définition du joueur en cours
 		this.currentPlayer = "P1";
 		// Status de la partie
