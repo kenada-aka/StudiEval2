@@ -57,8 +57,8 @@ Game.prototype = {
 		// Initialisation des événements + conservation du contexte !
 		
 		_addEventListener($('#new'), "click", this.refresh.bind(this));
-		_addEventListener($('#roll'), "click", function(e) { console.log("roll"); });
-		_addEventListener($('#hold'), "click", function(e) { console.log("hold"); });
+		_addEventListener($('#roll'), "click", this.roll.bind(this));
+		_addEventListener($('#hold'), "click", this.hold.bind(this));
 		
 	},
 	
@@ -77,6 +77,24 @@ Game.prototype = {
 		this.players.p2.updateRound();
 		// Status de la partie
 		this.state = "start";
+	},
+	
+	// Lancer le dé
+	
+	roll:function() {
+		if(this.state != "start") {
+			alert("Cliquez sur NEW GAME, merci ;)");
+			return;
+		}
+	},
+	
+	// Sauvegarde des points
+	
+	hold:function() {
+		if(this.state != "start") {
+			alert("Cliquez sur NEW GAME, merci ;)");
+			return;
+		}
 	},
 	
 	// Debug / Test
