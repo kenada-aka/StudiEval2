@@ -6,6 +6,10 @@
 	src:url("fonts/Lato/Lato-Regular.ttf") format("truetype");
 }
 
+body * {
+  font-family:"Lato";
+}
+
 /* Layout CSS Grid */
 
 
