@@ -102,8 +102,14 @@ Game.prototype = {
 		// Génétation d'un nombre aléatoire entre 0 et 5
 		let number = Math.floor(Math.random() * Math.floor(6));
 		// Mise à jour des points de round du joueur en cours
-		this.players[this.currentPlayer].updateRound(number);
-		console.log(number);
+		// En fonction des règles du jeu :
+		// Si le joueur obtient un 1 avec le dé (soit 0 dans le programme), le score dans round est perdu et c'est la fin de son tour !
+		if(number != 0) {
+			this.players[this.currentPlayer].updateRound(number+1);
+		} else {
+			this.players[this.currentPlayer].round = 0;
+			this.hold();
+		}
 	},
 	
 	// Sauvegarde des points
