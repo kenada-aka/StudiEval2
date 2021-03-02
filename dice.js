@@ -52,7 +52,7 @@ Dice.prototype = {
 		if(this.canvas.getContext) {
 			this.ctx = this.canvas.getContext("2d");
 		} else {
-			alert("Désolé, votre navigateur ne prend pas en charge l'élément canvas !");
+			Alert("Désolé, votre navigateur ne prend pas en charge l'élément canvas !");
 		}
 	},
 	
@@ -63,7 +63,7 @@ Dice.prototype = {
 		// Vérification de la propriété "mapping" (Array) avec "number"
 		
 		if(typeof this.mapping[number] == "undefined") {
-			alert("La valeur du dé doit être comprise entre 0 et 5");
+			Alert("La valeur du dé doit être comprise entre 0 et 5");
 			return;
 		}
 		

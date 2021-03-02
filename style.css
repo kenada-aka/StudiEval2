@@ -18,64 +18,49 @@ body {
 
 /* Layout CSS Grid */
 
-
+main > div {
+	align-self:center;
+	text-align:center;
+}
 
 main > div.new {
 	grid-area:new;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.playerP1 {
 	grid-area:player1;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.globalP1 {
 	grid-area:globalP1;
-	align-self:center;
 }
 
 main > div.roundP1 {
 	grid-area:roundP1;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.dice {
 	grid-area:dice;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.playerP2 {
 	grid-area:player2;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.globalP2 {
 	grid-area:globalP2;
-	align-self:center;
 }
 
 main > div.roundP2 {
 	grid-area:roundP2;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.roll {
 	grid-area:roll;
-	align-self:center;
-	text-align:center;
 }
 
 main > div.hold {
 	grid-area:hold;
-	align-self:center;
-	text-align:center;
 }
 
 main {
@@ -89,11 +74,11 @@ main {
 	grid-auto-rows: minmax(100px, auto);
 	
 	grid-template-areas:
-		"new new new"
-		"player1 dice player2"
-		"globalP1 dice globalP2"
-		"roundP1 roll roundP2"
-		"roundP1 hold roundP2";
+		"new 		new 		new"
+		"player1 	dice 		player2"
+		"globalP1 	dice 		globalP2"
+		"roundP1 	roll 		roundP2"
+		"roundP1 	hold 		roundP2";
 	
 }
 
@@ -141,7 +126,7 @@ div.playerP1 h1 i.active, div.playerP2 h1 i.active {
 	display:inline;
 }
 
-/* Système de message d'Alerte */
+/* Système de message d'alerte */
 
 #alert {
 	display:none;
@@ -154,7 +139,6 @@ div.playerP1 h1 i.active, div.playerP2 h1 i.active {
 
 #alert.active {
 	display:block;
-	
 	-webkit-animation-name:fadeIn;
 	animation-name:fadeIn;
 	-webkit-animation-duration:1s;

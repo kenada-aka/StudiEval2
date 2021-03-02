@@ -2,7 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Dynamiser vos sites web avec Javascript</title>
+		<title>Dice Game 2021</title>
 		<!-- Balises Meta générales -->
 		<meta name="Content-Type" content="UTF-8">
 		<meta name="Content-Language" content="fr">
@@ -19,26 +19,14 @@
 		<main>
 			<!-- New Game -->
 			<div class="new">
-				<button id="new" class="button button-light button-large"><i class="icon ion-android-add-circle assertive padding-right"></i> NEW GAME</button>
+				<button id="new" class="button button-light button-large"><i class="icon ion-android-add-circle assertive padding-right"></i>NEW GAME</button>
 			</div>
 			<!-- Player 1 -->
 			<div class="playerP1">
-				<h1 class="padding-vertical padding-horizontal">PLAYER 1 <i class="icon ion-ios-circle-filled assertive padding-left"></i></h1>
+				<h1 class="padding-vertical padding-horizontal">PLAYER 1<i class="icon ion-ios-circle-filled assertive padding-left"></i></h1>
 			</div>
 			<!-- Score Player 1 -->
 			<div class="globalP1">
-				<input class="score" type="text" disabled="disabled" value="0"/>
-			</div>
-			<!-- Dice -->
-			<div class="dice">
-				<canvas id="dice" class="dice">Désolé, votre navigateur ne prend pas en charge l'élément canvas !</canvas>
-			</div>
-			<!-- Player 2 -->
-			<div class="playerP2">
-				<h1 class="padding-vertical padding-horizontal"><i class="icon ion-ios-circle-filled assertive padding-right"></i> PLAYER 2</h1>
-			</div>
-			<!-- Score Player 1 -->
-			<div class="globalP2">
 				<input class="score" type="text" disabled="disabled" value="0"/>
 			</div>
 			<!-- Round Player 1 -->
@@ -48,13 +36,13 @@
 					<input class="current" type="text" disabled="disabled" value="0"/>
 				</div>
 			</div>
-			<!-- Button : roll dice -->
-			<div class="roll">
-				<button id="roll" class="button button-light button-large"><i class="icon ion-android-sync assertive padding-right"></i>ROLL DICE</button>
+			<!-- Player 2 -->
+			<div class="playerP2">
+				<h1 class="padding-vertical padding-horizontal"><i class="icon ion-ios-circle-filled assertive padding-right"></i>PLAYER 2</h1>
 			</div>
-			<!-- Button : hold -->
-			<div class="hold">
-				<button id="hold" class="button button-light button-large"><i class="icon ion-ios-download-outline assertive padding-right"></i>HOLD</button>
+			<!-- Score Player 1 -->
+			<div class="globalP2">
+				<input class="score" type="text" disabled="disabled" value="0"/>
 			</div>
 			<!-- Round Player 2 -->
 			<div class="roundP2">
@@ -63,11 +51,23 @@
 					<input class="current" type="text" disabled="disabled" value="0"/>
 				</div>
 			</div>
+			<!-- Dice -->
+			<div class="dice">
+				<canvas id="dice" class="dice">Désolé, votre navigateur ne prend pas en charge l'élément canvas !</canvas>
+			</div>
+			<!-- Button : roll dice -->
+			<div class="roll">
+				<button id="roll" class="button button-light button-large"><i class="icon ion-android-sync assertive padding-right"></i>ROLL DICE</button>
+			</div>
+			<!-- Button : hold -->
+			<div class="hold">
+				<button id="hold" class="button button-light button-large"><i class="icon ion-ios-download-outline assertive padding-right"></i>HOLD</button>
+			</div>
 		</main>
-		<!-- Système de message d'Alerte -->
+		<!-- Système de message d'alerte -->
 		<div id="alert">
 			<div class="background"></div>
-			<input class="message" type="text" disabled="disabled" value="Cliquez sur NEW GAME pour démarrer une partie..."/>
+			<input class="message" type="text" disabled="disabled" value="..."/>
 		</div>
 		<!-- Javascript : Game -->
 		<script src="game.js"></script>
