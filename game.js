@@ -101,6 +101,8 @@ Game.prototype = {
 		}
 		// Génétation d'un nombre aléatoire entre 0 et 5
 		let number = Math.floor(Math.random() * Math.floor(6));
+		// Mise à jour du Canvas
+		this.dice.draw(number);
 		// Mise à jour des points de round du joueur en cours
 		// En fonction des règles du jeu :
 		// Si le joueur obtient un 1 avec le dé (soit 0 dans le programme), le score dans round est perdu et c'est la fin de son tour !
@@ -132,7 +134,7 @@ Game.prototype = {
 	// Debug / Test
 	
 	test:function() {
-		this.dice.draw(5); // test
+		//this.dice.draw(5); // test
 		//this.dice.draw(6); // test ng
 		//this.dice.draw("a"); // test ng
 	}

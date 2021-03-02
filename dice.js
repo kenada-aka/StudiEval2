@@ -67,6 +67,10 @@ Dice.prototype = {
 			return;
 		}
 		
+		// Rafraichissement du canvas
+		
+		this.ctx.clearRect(0, 0, this.width, this.height);
+		
 		// Réglage du padding
 		let padding = {x:this.width/3, y:this.height/3};
 		// Taille du cercle
