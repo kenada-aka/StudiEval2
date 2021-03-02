@@ -123,12 +123,17 @@ Game.prototype = {
 		}
 		// Mise à jours des points
 		this.players[this.currentPlayer].updateGlobal();
-		// Désactive le joueur
-		this.players[this.currentPlayer].toggleCurrentPlayer();
-		// Alternance de joueur
-		this.currentPlayer = this.currentPlayer == "P1" ? "P2" : "P1";
-		// Active le joueur
-		this.players[this.currentPlayer].toggleCurrentPlayer();
+		// Vérification des points du joueur
+		if(this.players[this.currentPlayer].score >= 100) {
+			alert("Félicitation "+ this.currentPlayer +" vous avez gagné, vous avez plus de 100 points");
+		} else {
+			// Désactive le joueur
+			this.players[this.currentPlayer].toggleCurrentPlayer();
+			// Alternance de joueur
+			this.currentPlayer = this.currentPlayer == "P1" ? "P2" : "P1";
+			// Active le joueur
+			this.players[this.currentPlayer].toggleCurrentPlayer();
+		}
 	},
 	
 	// Debug / Test
