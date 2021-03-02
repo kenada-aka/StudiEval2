@@ -125,9 +125,9 @@ main input.current {
 	background-color:transparent;
 	text-align:center;
 	color:white;
-	font-size:24pt;
-	height:36pt;
-	width:100%;
+	font-size:5em;
+	width:90%;
+	height:90%;
 }
 
 
