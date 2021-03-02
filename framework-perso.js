@@ -3,7 +3,9 @@
 
 // Quick call of querySelector
 
-const $ = document.querySelector;
+const $ = function() {
+	return document.querySelector(...arguments);
+};
 
 // Cross Browser implementation of Event Listener
 // obj = HTMLElement
