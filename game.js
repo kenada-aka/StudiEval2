@@ -28,7 +28,10 @@ Player.prototype = {
 	// Mise à jour du score
 	
 	updateGlobal:function() {
+		this.score += this.round;
+		this.round = 0;
 		$('div.global'+ this.id +' input').value = this.score;
+		this.updateRound();
 	},
 	
 	// Mise à jour de round
@@ -46,8 +49,8 @@ const Game = function() {
 	this.state = "finish";
 	this.currentPlayer = "P1";
 	this.players = {
-		p1:null,
-		p2:null
+		P1:null,
+		P2:null
 	};
 };
 
@@ -74,16 +77,14 @@ Game.prototype = {
 	
 	refresh:function() {
 		// Initialisation du joueur 1
-		this.players.p1 = new Player("P1");
-		this.players.p1.init();
-		this.players.p1.updateGlobal();
-		this.players.p1.updateRound();
-		this.players.p1.toggleCurrentPlayer();
+		this.players.P1 = new Player("P1");
+		this.players.P1.init();
+		this.players.P1.updateGlobal();
+		this.players.P1.toggleCurrentPlayer();
 		// Initialisation du joueur 2
-		this.players.p2 = new Player("P2");
-		this.players.p2.init();
-		this.players.p2.updateGlobal();
-		this.players.p2.updateRound();
+		this.players.P2 = new Player("P2");
+		this.players.P2.init();
+		this.players.P2.updateGlobal();
 		// Définition du joueur en cours
 		this.currentPlayer = "P1";
 		// Status de la partie
@@ -106,6 +107,14 @@ Game.prototype = {
 			alert("Cliquez sur NEW GAME, merci ;)");
 			return;
 		}
+		// Mise à jours des points
+		this.players[this.currentPlayer].updateGlobal();
+		// Désactive le joueur
+		this.players[this.currentPlayer].toggleCurrentPlayer();
+		// Alternance de joueur
+		this.currentPlayer = this.currentPlayer == "P1" ? "P2" : "P1";
+		// Active le joueur
+		this.players[this.currentPlayer].toggleCurrentPlayer();
 	},
 	
 	// Debug / Test
