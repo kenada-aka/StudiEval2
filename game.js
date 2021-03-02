@@ -98,6 +98,9 @@ Game.prototype = {
 			alert("Cliquez sur NEW GAME, merci ;)");
 			return;
 		}
+		// Génétation d'un nombre aléatoire entre 0 et 5
+		let number = Math.floor(Math.random() * Math.floor(6));
+		console.log(number);
 	},
 	
 	// Sauvegarde des points
