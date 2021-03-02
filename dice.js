@@ -71,6 +71,12 @@ Dice.prototype = {
 		
 		this.ctx.clearRect(0, 0, this.width, this.height);
 		
+		// Fond blanc
+		
+		this.ctx.fillStyle = "#fff";
+		this.ctx.fillRect(0, 0, this.width, this.height);
+		this.ctx.fill();
+		
 		// Réglage du padding
 		let padding = {x:this.width/3, y:this.height/3};
 		// Taille du cercle
