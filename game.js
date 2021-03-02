@@ -44,6 +44,7 @@ Player.prototype = {
 const Game = function() {
 	this.dice;
 	this.state = "finish";
+	this.currentPlayer = "P1";
 	this.players = {
 		p1:null,
 		p2:null
@@ -83,6 +84,8 @@ Game.prototype = {
 		this.players.p2.init();
 		this.players.p2.updateGlobal();
 		this.players.p2.updateRound();
+		// Définition du joueur en cours
+		this.currentPlayer = "P1";
 		// Status de la partie
 		this.state = "start";
 	},
