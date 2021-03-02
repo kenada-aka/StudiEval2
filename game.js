@@ -109,6 +109,7 @@ Game.prototype = {
 		if(number != 0) {
 			this.players[this.currentPlayer].updateRound(number+1);
 		} else {
+			alert("Désolé vous venez de faire un 1, vous perdez vos points en cours et c'est la fin de votre tour !");
 			this.players[this.currentPlayer].round = 0;
 			this.hold();
 		}
