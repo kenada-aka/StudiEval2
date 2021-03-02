@@ -104,8 +104,9 @@ main input.score {
 	background-color:transparent;
 	text-align:center;
 	color:#ef473a;
-	font-size:36pt;
-	height:42pt;
+	font-size:8em;
+	width:90%;
+	height:90%;
 }
 
 /* Fix "card" */
