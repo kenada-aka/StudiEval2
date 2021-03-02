@@ -61,6 +61,10 @@ Game.prototype = {
 	
 	start:function() {
 		
+		// Message de début de jeu
+		
+		Alert("Cliquez sur NEW GAME pour démarrer une partie...");
+		
 		// Initialisation du Canvas
 		
 		this.dice = new Dice(200, 200);
@@ -108,7 +112,7 @@ Game.prototype = {
 	
 	roll:function() {
 		if(this.state != "start") {
-			alert("Cliquez sur NEW GAME, merci ;)");
+			Alert("Cliquez sur NEW GAME, merci ;)");
 			return;
 		}
 		// Génétation d'un nombre aléatoire entre 0 et 5
@@ -121,7 +125,7 @@ Game.prototype = {
 		if(number != 0) {
 			this.players[this.currentPlayer].updateRound(number+1);
 		} else {
-			alert("Désolé vous venez de faire un 1, vous perdez vos points en cours et c'est la fin de votre tour !");
+			Alert("Désolé vous venez de faire un 1, vous perdez vos points en cours et c'est la fin de votre tour !");
 			this.players[this.currentPlayer].round = 0;
 			this.hold();
 		}
@@ -131,14 +135,14 @@ Game.prototype = {
 	
 	hold:function() {
 		if(this.state != "start") {
-			alert("Cliquez sur NEW GAME, merci ;)");
+			Alert("Cliquez sur NEW GAME, merci ;)");
 			return;
 		}
 		// Mise à jours des points
 		this.players[this.currentPlayer].updateGlobal();
 		// Vérification des points du joueur
 		if(this.players[this.currentPlayer].score >= 100) {
-			alert("Félicitation "+ this.currentPlayer +" vous avez gagné, vous avez plus de 100 points");
+			Alert("Félicitation "+ this.currentPlayer +" vous avez gagné, vous avez plus de 100 points");
 			// Fin de partie
 			this.refresh();
 		} else {
