@@ -29,5 +29,5 @@ const _addEventListener = function(obj, event, func) {
 const Alert = function(message) {
 	$('#alert input.message').value = message;
 	$('#alert').classList.toggle("active");
-	setTimeout(function() { $('#alert').classList.toggle("active"); }, 3000);
+	setTimeout(function() { $('#alert').classList.toggle("active"); }, 1500);
 };
