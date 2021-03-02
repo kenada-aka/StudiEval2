@@ -142,7 +142,12 @@ Game.prototype = {
 		this.players[this.currentPlayer].updateGlobal();
 		// Vérification des points du joueur
 		if(this.players[this.currentPlayer].score >= 100) {
-			Alert("Félicitation "+ this.currentPlayer +" vous avez gagné, vous avez plus de 100 points");
+			// Mapping textes
+			let text = {
+				P1:"Player 1",
+				P2:"Player 2",
+			};
+			Alert("Félicitation "+ text[this.currentPlayer] +" vous avez gagné, vous avez plus de 100 points");
 			// Fin de partie
 			this.refresh();
 		} else {
