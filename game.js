@@ -11,11 +11,12 @@ const Player = function(id) {
 
 Player.prototype = {
 	
-	// Initialisation
+	// Initialisation + supprime la classe active si présente !
 	
 	init:function() {
 		this.score = 0;
 		this.round = 0;
+		$('div.player'+ this.id +' i').classList.remove("active");
 	},
 	
 	// Active/Désactive le témoin (cercle rouge) qui indique le joueur entrain de jouer...
