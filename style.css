@@ -118,10 +118,14 @@ main canvas.dice {
 	border:1px solid black;
 }
 
-/* Ne pas afficher le témoin à côté de PLAYER */
+/* Toggle de témoin en forme de cercle à côté de PLAYER */
 
 div.playerP1 h1 i, div.playerP2 h1 i {
 	display:none;
+}
+
+div.playerP1 h1 i.active, div.playerP2 h1 i.active {
+	display:inline;
 }
 
 
